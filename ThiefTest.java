@@ -45,4 +45,11 @@ public class ThiefTest{
     
   }
 
+  @Test
+  public void fencingGoods() {
+    thief.steal(swag);
+    thief.fence();
+    assertEquals(0, thief.stolenGoods());
+  }
+
 }

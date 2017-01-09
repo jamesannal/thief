@@ -32,4 +32,11 @@ public class Thief{
   public boolean isLootBagFull() {
     return stolenGoods() == bag.length;
   }
+
+  public void fence() {
+    for(int i = 0; i< bag.length; i++) {
+
+      bag[i] = null;
+    }
+  }
 }
