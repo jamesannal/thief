@@ -23,5 +23,10 @@ public class ThiefTest{
     assertEquals(1, thief.stolenGoods());
   }
 
+  @Test 
+  public void startsWithEmptyLootBag() {
+    assertEquals(0, thief.stolenGoods());
+  }
+
 
 }
