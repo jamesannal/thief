@@ -10,4 +10,20 @@ public class Thief{
   public String getName(){
     return this.name;
   }
+
+  public void steal(Swag stuff){
+  int nextIndex = stolenGoods();
+  bag[nextIndex] = stuff;
+  }
+
+
+  public int stolenGoods() {
+    int count = 0;
+    for(Swag swag : bag) {
+      if(swag != null) {
+        count += 1;
+      }
+    }
+    return count;
+  }
 }

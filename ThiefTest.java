@@ -15,4 +15,13 @@ public class ThiefTest{
   public void hasName(){
     assertEquals("Dick", thief.getName());
   }
+
+  @Test
+  public void canStealStuff() {
+    Swag swag = new Swag();
+    thief.steal(swag);
+    assertEquals(1, thief.stolenGoods());
+  }
+
+
 }
