@@ -12,6 +12,8 @@ public class Thief{
   }
 
   public void steal(Swag stuff){
+    if(isLootBagFull()) return;
+
   int nextIndex = stolenGoods();
   bag[nextIndex] = stuff;
   }
@@ -25,5 +27,9 @@ public class Thief{
       }
     }
     return count;
+  }
+
+  public boolean isLootBagFull() {
+    return stolenGoods() == bag.length;
   }
 }

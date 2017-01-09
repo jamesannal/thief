@@ -28,5 +28,21 @@ public class ThiefTest{
     assertEquals(0, thief.stolenGoods());
   }
 
+  @Test
+  public void canFillLootBag() {
+    for(int i = 0; i < 20; i++) {
+      thief.steal(swag);
+    }
+    assertEquals(10, thief.stolenGoods());
+  }
+
+  @Test
+  public void lootBagFullAfter5Items(){
+    for(int i = 0; i<10; i++) {
+      thief.steal(swag);
+    }
+    assertEquals(true, thief.isLootBagFull());
+    
+  }
 
 }
