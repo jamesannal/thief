@@ -1,10 +1,13 @@
+import java.util.*;
+
 public class Mark{
+
   private String name;
-  private Swag[] swag;
+  private ArrayList<Swagable> swag;
 
   public Mark(String name){
     this.name = name;
-    swag = new Swag[20];
+    swag = new ArrayList<Swagable>();
   }
 
   public String getName(){
@@ -12,18 +15,11 @@ public class Mark{
   }
 
   public void addPossession(Swag stuff){
-  int nextIndex = ownedStuff();
-  swag[nextIndex] = stuff;
+    swag.add(stuff);
   }
 
   public int ownedStuff() {
-    int count = 0;
-    for(Swag swag : swag) {
-      if(swag != null) {
-        count += 1;
-      }
-    }
-    return count;
+    return swag.size();
   }
 
 }

@@ -1,3 +1,3 @@
-public class Swag{
+public class Swag implements Swagable {
   
 }
